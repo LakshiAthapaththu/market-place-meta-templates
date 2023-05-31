@@ -1,0 +1,170 @@
+{
+    "create": {
+        "logo": "https://console.asgardeo.io/libs/themes/default/assets/images/identity-providers/github-idp-illustration.svg",
+        "header": "GitHub",
+        "Subheading": "Login users with existing GitHub accounts.",
+        "documentation": "{ ENV }/asgardeo/docs/guides/authentication/social-login/add-github-login/",
+        "modal": {
+            "form": {
+                "Fields": [
+                    {
+                        "index": 0,
+                        "name": "name",
+                        "label": "Name",
+                        "type": "text",
+                        "required": true,
+                        "placeholder": "Enter a name for the connection.",
+                        "initialValue": "GitHub"
+                    },
+                    {
+                        "index": 1,
+                        "ariaLabel": "GitHub Client ID", 
+                        "type": "text", 
+                        "name": "clientId", 
+                        "label": "Client ID",
+                        "placeholder": "Enter Client ID from Github application.",
+                        "required": true, 
+                        "autoComplete": true,
+                        "testId": "github-idp-create-wizard-page-idp-client-id" 
+                    },
+                    {
+                        "index": 2,
+                        "ariaLabel": "GitHub Client Secret", 
+                        "type": "password", 
+                        "name": "clientSecret", 
+                        "label": "Client secret",
+                        "placeholder": "Enter Client secret from Github application.",
+                        "required": true, 
+                        "autoComplete": true,
+                        "testId": "github-idp-create-wizard-page-idp-client-secret" 
+                    }
+                ]
+                
+            }
+        }
+    },
+    "edit" : {
+        "tabs": {
+            "general" : [
+                {
+                    "index": 0,
+                    "displayOrder" : 1,
+                    "ariaLabel": "name", 
+                    "inputType": "resource_name",
+                    "type": "text",
+                    "name": "name",
+                    "label": "Name",
+                    "required": true ,
+                    "message": "Identity Provider name is required",
+                    "placeholder": "GitHub",
+                    "validation": true,
+                    "value": "",
+                    "maxLength": "50",
+                    "minLength": "3",
+                    "data-testid": "idp-edit-page-general-settings-form-idp-name",
+                    "hint": "Enter a unique name for this connection.",
+                    "readOnly": false
+                },
+                {
+                    "index": 1,
+                    "displayOrder" : 2,
+                    "type": "textarea", 
+                    "name" : "description",
+                    "ariaLabel" : "description",
+                    "label" : "Description",
+                    "required": false,
+                    "placeholder": "Enter a description of the identity provider.",
+                    "value": "",
+                    "data-testid": "idp-edit-page-general-settings-form-idp-description",
+                    "maxLength": "300",
+                    "minLength": "3",
+                    "hint": "A text description of the identity provider.",
+                    "readOnly": false
+                },
+                {
+                    "index": 2,
+                    "displayOrder" : 3,
+                    "name": "jwks_endpoint",
+                    "ariaLabel": "JWKS Endpoint URL",
+                    "inputType": "url",
+                    "type": "text",
+                    "label": "JWKS Endpoint URL",
+                    "required": true,
+                    "placeholder": "https://{ oauth-provider-url }/oauth/jwks",
+                    "value": "",
+                    "data-testid": "",
+                    "maxLength": "2048",
+                    "minLength": "10",
+                    "hint": "A JSON Web Key (JWK) Set is a JSON object that represents a set of JWKs. The JSON object MUST have a keys member, with its value being an array of JWKs.",
+                    "readOnly": false
+                },
+                {
+                    "index": 3,
+                    "displayOrder" : 4,
+                    "type": "certbox",
+                    "isJWKSEnabled": "",
+                    "isReadOnly": "",
+                    "editingIDP": "",
+                    "onUpdate": "",
+                    "isPEMEnabled": ""
+                }
+            ],
+            "settings" : [
+                {
+                    "index": 0,
+                    "displayOrder" : 5,
+                    "ariaLabel": "GitHub authenticator client ID",
+                    "inputType": "default",
+                    "name": "ClientId",
+                    "label": "Client ID",
+                    "placeholder": "Enter Client ID from Github application.",
+                    "hint": "The Client ID you received from GitHub for your OAuth app.",
+                    "required": true,
+                    "readOnly": false,
+                    "value": "",
+                    "maxLength": "3",
+                    "minLength": "50",
+                    "width": "",
+                    "data-testid": "idp-edit-page-authenticator-settings-GithubAuthenticator-content-client-id"
+                },
+                {
+                    "index": 1,
+                    "displayOrder" : 6,
+                    "ariaLabel": "GitHub authenticator client secret",
+                    "inputType": "password",
+                    "type": "password",
+                    "name": "ClientSecret",
+                    "label": "Client secret",
+                    "placeholder": "Enter Client secret from Github application.",
+                    "hint": "The Client secret you received from GitHub for your OAuth app.",
+                    "required": true,
+                    "readOnly": false,
+                    "value": "",
+                    "maxLength": "50",
+                    "minLength": "3",
+                    "width": "",
+                    "data-testid": "idp-edit-page-authenticator-settings-GithubAuthenticator-content-client-secret"
+                },
+                {
+                    "index": 2,
+                    "displayOrder" : 7,
+                    "type": "text",
+                    "ariaLabel": "",
+                    "inputType": "",
+                    "name": "",
+                    "label": "Authorization callback URL",
+                    "placeholder": "",
+                    "hint": "The set of redirect URIs specified as valid in the GitHub for your OAuth app.",
+                    "required": "",
+                    "value": "",
+                    "readOnly": true,
+                    "maxLength": "",
+                    "minLength": "",
+                    "width": "",
+                    "data-testid": "idp-edit-page-authenticator-settings-GithubAuthenticator-content-authorized-redirect-url-wrapper"
+                }
+            ]
+        }
+        
+    }
+}

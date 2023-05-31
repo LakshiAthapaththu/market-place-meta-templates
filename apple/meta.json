@@ -1,0 +1,237 @@
+{
+    "create": {
+        "logo": "https://console.asgardeo.io/libs/themes/default/assets/images/identity-providers/apple.svg",
+        "header": "Apple",
+        "Subheading": "Login users with their Apple IDs.",
+        "documentation": "{ENV}/asgardeo/docs/guides/authentication/social-login/add-apple-login/",
+        "modal": {
+            "form": {
+                "Fields": [
+                    {
+                        "index": 0,
+                        "name": "name",
+                        "label": "Name",
+                        "type": "text",
+                        "required": true,
+                        "placeholder": "Enter a name for the connection.",
+                        "initialValue": "Apple"
+                    },
+                    {
+                        "index": 1,
+                        "ariaLabel": "Apple Team ID", 
+                        "type": "text", 
+                        "name": "teamId", 
+                        "label": "Team ID",
+                        "placeholder": "Enter the Team ID of the Apple developer team.",
+                        "required": true, 
+                        "autoComplete": true,
+                        "testId": "apple-idp-create-wizard-content-idp-team-id" 
+                    },
+                    {
+                        "index": 2,
+                        "ariaLabel": "Apple Key ID", 
+                        "type": "text", 
+                        "name": "keyId", 
+                        "label": "Key ID",
+                        "placeholder": "Enter the the Key ID of the application's private key.",
+                        "required": true, 
+                        "autoComplete": true,
+                        "testId": "apple-idp-create-wizard-content-idp-key-id" 
+                    },
+                    {
+                        "index": 3,
+                        "ariaLabel": "Apple Private Key", 
+                        "type": "password", 
+                        "name": "privateKey", 
+                        "label": "Private Key",
+                        "placeholder": "Enter the Private Key generated for the Apple application.",
+                        "required": true, 
+                        "autoComplete": true,
+                        "testId": "apple-idp-create-wizard-content-idp-private-key" 
+                    }
+                ]
+                
+            }
+        }
+    },
+    "edit" : {
+        "tabs": {
+            "general" : [
+                {
+                    "index": 0,
+                    "displayOrder" : 1,
+                    "ariaLabel": "name", 
+                    "inputType": "resource_name",
+                    "type": "text",
+                    "name": "name",
+                    "label": "Name",
+                    "required": true ,
+                    "message": "Identity Provider name is required",
+                    "placeholder": "Apple",
+                    "validation": true,
+                    "value": "",
+                    "maxLength": "50",
+                    "minLength": "3",
+                    "data-testid": "idp-edit-page-general-settings-form-idp-name",
+                    "hint": "Enter a unique name for this connection.",
+                    "readOnly": false
+                },
+                {
+                    "index": 1,
+                    "displayOrder" : 2,
+                    "type": "textarea", 
+                    "name" : "description",
+                    "ariaLabel" : "description",
+                    "label" : "Description",
+                    "required": false,
+                    "placeholder": "Enter a description of the identity provider.",
+                    "value": "",
+                    "data-testid": "idp-edit-page-general-settings-form-idp-description",
+                    "maxLength": "300",
+                    "minLength": "3",
+                    "hint": "A text description of the identity provider.",
+                    "readOnly": false
+                },
+                {
+                    "index": 2,
+                    "displayOrder" : 3,
+                    "name": "jwks_endpoint",
+                    "ariaLabel": "JWKS Endpoint URL",
+                    "inputType": "url",
+                    "type": "text",
+                    "label": "JWKS Endpoint URL",
+                    "required": true,
+                    "placeholder": "https://{ oauth-provider-url }/oauth/jwks",
+                    "value": "",
+                    "data-testid": "",
+                    "maxLength": "2048",
+                    "minLength": "10",
+                    "hint": "A JSON Web Key (JWK) Set is a JSON object that represents a set of JWKs. The JSON object MUST have a keys member, with its value being an array of JWKs.",
+                    "readOnly": false
+                },
+                {
+                    "index": 3,
+                    "displayOrder" : 4,
+                    "type": "certbox",
+                    "isJWKSEnabled": "",
+                    "isReadOnly": "",
+                    "editingIDP": "",
+                    "onUpdate": "",
+                    "isPEMEnabled": ""
+                }
+                
+            ],
+            "settings" : [
+                {
+                    "index": 0,
+                    "displayOrder" : 5,
+                    "ariaLabel": "Apple authenticator client ID",
+                    "inputType": "default",
+                    "name": "ClientId",
+                    "label": "Services ID",
+                    "placeholder": "Enter the Services ID registered for the Apple application.",
+                    "hint": "The unique identifier which is provided when creating the Apple Services ID.",
+                    "required": true,
+                    "readOnly": false,
+                    "value": "",
+                    "maxLength": "3",
+                    "minLength": "50",
+                    "width": "",
+                    "data-testid": "idp-edit-page-authenticator-settings-AppleOIDCAuthenticator-content-client-id"
+                },
+                {
+                    "index": 1,
+                    "displayOrder" : 6,
+                    "ariaLabel": "Apple authenticator team ID",
+                    "inputType": "default",
+                    "name": "TeamId",
+                    "label": "Team ID",
+                    "placeholder": "Enter the Team ID of the Apple developer team.",
+                    "hint": "The generated unique ID which is assigned to the Apple developer team.",
+                    "required": true,
+                    "readOnly": false,
+                    "value": "",
+                    "maxLength": "10",
+                    "minLength": "10",
+                    "width": "",
+                    "data-testid": "idp-edit-page-authenticator-settings-AppleOIDCAuthenticator-content-team-id"
+                },
+                {
+                    "index": 2,
+                    "displayOrder" : 7,
+                    "ariaLabel": "Apple authenticator private key",
+                    "inputType": "password",
+                    "type": "password",
+                    "name": "PrivateKey",
+                    "label": "Private Key",
+                    "placeholder": "Enter the Private Key generated for the Apple application.",
+                    "hint": "The generated private key for the Apple application.",
+                    "required": true,
+                    "readOnly": false,
+                    "value": "",
+                    "maxLength": "1000",
+                    "minLength": "100",
+                    "width": "",
+                    "data-testid": "idp-edit-page-authenticator-settings-AppleOIDCAuthenticator-content-private-key"
+                },
+                {
+                    "index": 3,
+                    "displayOrder" : 8,
+                    "ariaLabel": "Client secret validity period",
+                    "inputType": "default",
+                    "type": "text",
+                    "name": "SecretValidityPeriod",
+                    "label": "Client Secret Validity Period",
+                    "placeholder": "Enter the Private Key generated for the Apple application.",
+                    "hint": "The generated private key for the Apple application.",
+                    "required": true,
+                    "readOnly": false,
+                    "value": "",
+                    "maxLength": "8",
+                    "minLength": "2",
+                    "width": "",
+                    "data-testid": "idp-edit-page-authenticator-settings-AppleOIDCAuthenticator-content-secret-validity-period"
+                },
+                {
+                    "index": 4,
+                    "displayOrder" : 9,
+                    "type": "text",
+                    "ariaLabel": "",
+                    "inputType": "",
+                    "name": "",
+                    "label": "Authorized redirect URI",
+                    "placeholder": "",
+                    "hint": "The authorized redirect URI used to obtain Apple credentials.",
+                    "required": "",
+                    "value": "",
+                    "readOnly": true,
+                    "maxLength": "",
+                    "minLength": "",
+                    "width": "",
+                    "data-testid": "idp-edit-page-authenticator-settings-AppleOIDCAuthenticator-content-authorized-redirect-url-wrapper"
+                },
+                {
+                    "index": 5,
+                    "displayOrder" : 10,
+                    "ariaLabel": "Additional query parameters",
+                    "inputType": "default",
+                    "name": "AdditionalQueryParameters",
+                    "label": "Additional Query Parameters",
+                    "placeholder": "Enter additional query parameters.",
+                    "hint": "Additional query parameters to be sent to Apple.",
+                    "required": false,
+                    "value": "",
+                    "readOnly": false,
+                    "maxLength": "1000",
+                    "minLength": "0",
+                    "width": "",
+                    "data-testid": "idp-edit-page-authenticator-settings-AppleOIDCAuthenticator-content-additional-query-parameters"
+                }
+
+
+                
+            ]
+        }
+        
+    }
+}

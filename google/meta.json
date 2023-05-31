@@ -1,0 +1,204 @@
+{
+    "create": {
+        "logo": "https://console.asgardeo.io/libs/themes/default/assets/images/identity-providers/google-idp-illustration.svg",
+        "header": "Google",
+        "Subheading": "Login users with existing Google accounts.",
+        "documentation": "{ ENV }/asgardeo/docs/guides/authentication/social-login/add-google-login/",
+        "modal": {
+            "form": {
+                "Fields": [
+                    {
+                        "index": 0,
+                        "name": "name",
+                        "label": "Name",
+                        "type": "text",
+                        "required": true,
+                        "placeholder": "Enter a name for the connection.",
+                        "initialValue": "Google"
+                    },
+                    {
+                        "index": 1,
+                        "ariaLabel": "Google Client ID", 
+                        "type": "text", 
+                        "name": "clientId", 
+                        "label": "Client ID",
+                        "placeholder": "Enter Client ID from Google application.",
+                        "required": true, 
+                        "autoComplete": true,
+                        "testId": "idp-edit-idp-create-wizard-idp-client-id" 
+                    },
+                    {
+                        "index": 2,
+                        "ariaLabel": "Google Client Secret", 
+                        "type": "password", 
+                        "name": "clientSecret", 
+                        "label": "Client secret",
+                        "placeholder": "Enter Client secret from Google application.",
+                        "required": true, 
+                        "autoComplete": true,
+                        "testId": "idp-edit-idp-create-wizard-idp-client-secret" 
+                    }
+                ]
+                
+            }
+        }
+    },
+    "edit" : {
+        "tabs": {
+            "general" : [
+                {
+                    "index": 0,
+                    "displayOrder" : 1,
+                    "ariaLabel": "name", 
+                    "inputType": "resource_name",
+                    "name": "name",
+                    "label": "Name",
+                    "required": true,
+                    "message": "Identity Provider name is required",
+                    "placeholder": "Google",
+                    "validation": true,
+                    "value": "",
+                    "maxLength": "50",
+                    "minLength": "3",
+                    "data-testid": "idp-edit-page-general-settings-form-idp-name",
+                    "hint": "Enter a unique name for this connection.",
+                    "readOnly": false
+                },
+                {
+                    "index": 1,
+                    "displayOrder" : 2,
+                    "type": "textarea", 
+                    "name" : "description",
+                    "ariaLabel" : "description",
+                    "label" : "Description",
+                    "required": false,
+                    "placeholder": "Enter a description of the identity provider.",
+                    "value": "",
+                    "data-testid": "idp-edit-page-general-settings-form-idp-description",
+                    "maxLength": "300",
+                    "minLength": "3",
+                    "hint": "A text description of the identity provider.",
+                    "readOnly": false
+                },
+                {
+                    "index": 2,
+                    "displayOrder" : 3,
+                    "name": "jwks_endpoint",
+                    "ariaLabel": "JWKS Endpoint URL",
+                    "inputType": "url",
+                    "type": "text",
+                    "label": "JWKS Endpoint URL",
+                    "required": true,
+                    "placeholder": "https://{ oauth-provider-url }/oauth/jwks",
+                    "value": "",
+                    "data-testid": "",
+                    "maxLength": "2048",
+                    "minLength": "10",
+                    "hint": "A JSON Web Key (JWK) Set is a JSON object that represents a set of JWKs. The JSON object MUST have a keys member, with its value being an array of JWKs.",
+                    "readOnly": false
+                },
+                {
+                    "index": 3,
+                    "displayOrder" : 4,
+                    "type": "certbox",
+                    "isJWKSEnabled": "",
+                    "isReadOnly": "",
+                    "editingIDP": "",
+                    "onUpdate": "",
+                    "isPEMEnabled": ""
+                }
+            ],
+            "settings" : [
+                {
+                    "index": 0,
+                    "displayOrder" : 5,
+                    "ariaLabel": "Google authenticator client ID",
+                    "inputType": "default",
+                    "name": "ClientId",
+                    "label": "Client ID",
+                    "placeholder": "Enter Client ID from Google application.",
+                    "hint": "The Client ID you received from Google for your OAuth app.",
+                    "required": true,
+                    "readOnly": false,
+                    "value": "",
+                    "maxLength": "100",
+                    "minLength": "3",
+                    "width": "",
+                    "data-testid": "idp-edit-page-authenticator-settings-GoogleOIDCAuthenticator-content-client-id"
+
+                },
+                {
+                    "index": 1,
+                    "displayOrder" : 6,
+                    "ariaLabel": "Google authenticator client secret",
+                    "className": "ui icon input",
+                    "inputType": "password",
+                    "type": "password",
+                    "name": "ClientSecret",
+                    "label": "Client secret",
+                    "placeholder": "Enter Client secret from Google application.",
+                    "hint": "The Client secret you received from Google for your OAuth app.",
+                    "required": true,
+                    "readOnly": false,
+                    "value": "",
+                    "maxLength": "50",
+                    "minLength": "3",
+                    "width": "",
+                    "data-testid": "idp-edit-page-authenticator-settings-GoogleOIDCAuthenticator-content-client-secret"
+                },
+                {
+                    "index": 2,
+                    "displayOrder" : 7,
+                    "ariaLabel": "",
+                    "inputType": "",
+                    "type": "text",
+                    "name": "",
+                    "label": "Authorized redirect URI",
+                    "placeholder": "",
+                    "hint": "The authorized redirect URI used to obtain Google credentials.",
+                    "required": "",
+                    "value": "",
+                    "readOnly": true,
+                    "maxLength": "",
+                    "minLength": "",
+                    "width": "",
+                    "data-testid": "idp-edit-page-authenticator-settings-GoogleOIDCAuthenticator-content-authorized-redirect-url-wrapper"
+
+
+                },
+                {
+                    "index": 3,
+                    "displayOrder" : 8,
+                    "ariaLabel": "Google authenticator additional query parameters",
+                    "inputType": "default",
+                    "name": "AdditionalQueryParameters",
+                    "label": "Additional Query Parameters",
+                    "placeholder": "Enter additional query parameters.",
+                    "hint": "Additional query parameters to be sent to Google.",
+                    "required": false,
+                    "value": "",
+                    "readOnly": false,
+                    "maxLength": "1000",
+                    "minLength": "0",
+                    "width": "",
+                    "data-testid": "idp-edit-page-authenticator-settings-GoogleOIDCAuthenticator-content-additional-query-parameters"
+                
+                },
+                {
+                    "index": 4,
+                    "displayOrder" : 9,
+                    "type": "toggle",
+                    "ariaLabel": "Enable Google One Tap as a sign in option",
+                    "name": "IsGoogleOneTapEnabled",
+                    "required": false,
+                    "toggle": "",
+                    "label": "Google One Tap",
+                    "placeholder": "Google one tap as a sign in option",
+                    "hint": "Enabling Google One Tap as a sign in option",
+                    "readOnly": true,
+                    "data-testid": "idp-edit-page-authenticator-settings-GoogleOIDCAuthenticator-content-google-one-tap"
+                }
+            ]
+        }
+    }
+}

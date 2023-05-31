@@ -122,8 +122,8 @@
                     "required": true,
                     "readOnly": false,
                     "value": "",
-                    "maxLength": "3",
-                    "minLength": "50",
+                    "maxLength": "50",
+                    "minLength": "3",
                     "width": "",
                     "data-testid": "idp-edit-page-authenticator-settings-FacebookAuthenticator-content-client-id"
                 },

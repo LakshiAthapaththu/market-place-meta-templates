@@ -125,13 +125,14 @@
                     "value": "",
                     "maxLength": "100",
                     "minLength": "3",
-                    "width": "",
+                    "width": "16",
                     "data-testid": "idp-edit-page-authenticator-settings-OpenIDConnectAuthenticator-content-client-id"
                 },
                 {
                     "index": 1,
                     "displayOrder" : 6,
                     "ariaLabel": "Microsoft authenticator client secret",
+                    "className": "addon-field-wrapper",
                     "inputType": "password",
                     "type": "password",
                     "name": "ClientSecret",
@@ -143,16 +144,16 @@
                     "value": "",
                     "maxLength": "50",
                     "minLength": "3",
-                    "width": "",
+                    "width": "16",
                     "data-testid": "idp-edit-page-authenticator-settings-OpenIDConnectAuthenticator-content-client-secret"
                 },
                 {
                     "index": 2,
                     "displayOrder" : 7,
-                    "ariaLabel": "",
-                    "inputType": "",
+                    "ariaLabel": "Microsoft authenticator authorized redirect URL",
+                    "inputType": "copy_input",
                     "type": "text",
-                    "name": "",
+                    "name": "callbackUrl",
                     "label": "Authorized redirect URI",
                     "placeholder": "",
                     "hint": "The authorized redirect URI used to obtain Microsoft credentials.",
@@ -161,30 +162,46 @@
                     "readOnly": true,
                     "maxLength": "",
                     "minLength": "",
-                    "width": "",
+                    "width": "16",
                     "data-testid": "idp-edit-page-authenticator-settings-OpenIDConnectAuthenticator-content-authorized-redirect-url-wrapper"
                 },
                 {
                     "index": 3,
                     "displayOrder" : 8,
+                    "field": "Scopes",
+                    "ariaLabel": "",
+                    "inputType": "default",
+                    "name": "",
+                    "label":"Scopes",
                     "placeholder": "e.g: openid",
-                    "type": "text"
+                    "hint": "The types of access provided for the connected apps to access data from Microsoft.",
+                    "required": false,
+                    "value": "",
+                    "readOnly": false,
+                    "maxLength": "",
+                    "minLength": "",
+                    "width": "16",
+                    "data-testid": ""
                 },
                 {
                     "index": 4,
                     "displayOrder" : 9,
-                    "type": "key_value",
-                    "key": {
-                        "placeholder": "name",
-                        "type": "text" 
-                    },
-                    "value": {
-                        "placeholder": "value",
-                        "type": "text"    
-                    }
+                    "field": "QueryParams",
+                    "ariaLabel": "",
+                    "inputType": "default",
+                    "name": "commonAuthQueryParams",
+                    "label": "Additional Query Parameters",
+                    "placeholder": "",
+                    "hint": "Additional query parameters to be sent to Microsoft.",
+                    "required": "",
+                    "value": "",
+                    "readOnly": "",
+                    "maxLength": "",
+                    "minLength": "",
+                    "width": "16",
+                    "data-testid": ""
                 }
             ]
-        }
-        
+        }    
     }
 }

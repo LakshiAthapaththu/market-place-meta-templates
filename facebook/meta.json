@@ -124,13 +124,14 @@
                     "value": "",
                     "maxLength": "50",
                     "minLength": "3",
-                    "width": "",
+                    "width": "16",
                     "data-testid": "idp-edit-page-authenticator-settings-FacebookAuthenticator-content-client-id"
                 },
                 {
                     "index": 1,
                     "displayOrder" : 6,
                     "ariaLabel": "Facebook authenticator client secret",
+                    "className": "addon-field-wrapper",
                     "inputType": "password",
                     "type": "password",
                     "name": "ClientSecret",
@@ -142,16 +143,16 @@
                     "value": "",
                     "maxLength": "50",
                     "minLength": "3",
-                    "width": "",
+                    "width": "16",
                     "data-testid": "idp-edit-page-authenticator-settings-FacebookAuthenticator-content-client-secret"
                 },
                 {
                     "index": 2,
                     "displayOrder" : 7,
                     "type": "text",
-                    "ariaLabel": "",
-                    "inputType": "",
-                    "name": "",
+                    "ariaLabel": "Facebook authenticator authorized redirect URL",
+                    "inputType": "copy_input",
+                    "name": "callBackUrl",
                     "label": "Valid OAuth redirect URI",
                     "placeholder": "",
                     "hint": "The redirect URI specified as valid in the Facebook OAuth app.",
@@ -160,7 +161,7 @@
                     "readOnly": true,
                     "maxLength": "",
                     "minLength": "",
-                    "width": "",
+                    "width": "16",
                     "data-testid": "idp-edit-page-authenticator-settings-FacebookAuthenticator-content-authorized-redirect-url-wrapper"
                 }
             ]

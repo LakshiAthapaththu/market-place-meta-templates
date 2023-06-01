@@ -123,7 +123,7 @@
                     "value": "",
                     "maxLength": "100",
                     "minLength": "3",
-                    "width": "",
+                    "width": "16",
                     "data-testid": "idp-edit-page-authenticator-settings-GoogleOIDCAuthenticator-content-client-id"
 
                 },
@@ -131,7 +131,7 @@
                     "index": 1,
                     "displayOrder" : 6,
                     "ariaLabel": "Google authenticator client secret",
-                    "className": "ui icon input",
+                    "className": "addon-field-wrapper",
                     "inputType": "password",
                     "type": "password",
                     "name": "ClientSecret",
@@ -143,16 +143,16 @@
                     "value": "",
                     "maxLength": "50",
                     "minLength": "3",
-                    "width": "",
+                    "width": "16",
                     "data-testid": "idp-edit-page-authenticator-settings-GoogleOIDCAuthenticator-content-client-secret"
                 },
                 {
                     "index": 2,
                     "displayOrder" : 7,
-                    "ariaLabel": "",
-                    "inputType": "",
+                    "ariaLabel": "Google authenticator authorized redirect URL",
+                    "inputType": "copy_input",
                     "type": "text",
-                    "name": "",
+                    "name": "callbackUrl",
                     "label": "Authorized redirect URI",
                     "placeholder": "",
                     "hint": "The authorized redirect URI used to obtain Google credentials.",
@@ -161,7 +161,7 @@
                     "readOnly": true,
                     "maxLength": "",
                     "minLength": "",
-                    "width": "",
+                    "width": "16",
                     "data-testid": "idp-edit-page-authenticator-settings-GoogleOIDCAuthenticator-content-authorized-redirect-url-wrapper"
 
 
@@ -180,7 +180,7 @@
                     "readOnly": false,
                     "maxLength": "1000",
                     "minLength": "0",
-                    "width": "",
+                    "width": "16",
                     "data-testid": "idp-edit-page-authenticator-settings-GoogleOIDCAuthenticator-content-additional-query-parameters"
                 
                 },
